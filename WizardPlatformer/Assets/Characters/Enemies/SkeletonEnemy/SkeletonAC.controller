@@ -73,6 +73,7 @@ AnimatorState:
   m_StateMachineBehaviours:
   - {fileID: -1254471598480276788}
   - {fileID: 5584878233850295419}
+  - {fileID: 8155905437675366006}
   m_Position: {x: 50, y: 50, z: 0}
   m_IKOnFeet: 0
   m_WriteDefaultValues: 1
@@ -106,6 +107,20 @@ MonoBehaviour:
   updateOnStateExit: 1
   enterValue: 0
   exitValue: 1
+--- !u!114 &-5993520963426810641
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7b563c62d3519fb488a0549ab7c446db, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sfx: {fileID: 8300000, guid: 3655217025b9a8b4abdd69d78d27e463, type: 3}
+  volume: 1
 --- !u!1107 &-4612862237859679841
 AnimatorStateMachine:
   serializedVersion: 6
@@ -224,6 +239,7 @@ AnimatorStateMachine:
   m_StateMachineTransitions: {}
   m_StateMachineBehaviours:
   - {fileID: 8105426775793866712}
+  - {fileID: -5993520963426810641}
   m_AnyStatePosition: {x: 40, y: -100, z: 0}
   m_EntryPosition: {x: 50, y: 120, z: 0}
   m_ExitPosition: {x: 800, y: 120, z: 0}
@@ -413,6 +429,7 @@ AnimatorState:
   m_StateMachineBehaviours:
   - {fileID: -1423548931821786155}
   - {fileID: -8087255104169838196}
+  - {fileID: 5770651372747391979}
   m_Position: {x: 50, y: 50, z: 0}
   m_IKOnFeet: 0
   m_WriteDefaultValues: 1
@@ -515,6 +532,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   disappearTime: 5
+--- !u!114 &5770651372747391979
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7b563c62d3519fb488a0549ab7c446db, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sfx: {fileID: 8300000, guid: 825c525cc52350d42ab0f1ff251e1f03, type: 3}
+  volume: 1
 --- !u!1101 &6121250242840618565
 AnimatorStateTransition:
   m_ObjectHideFlags: 1
@@ -560,3 +591,17 @@ MonoBehaviour:
   exitValue: 1
   updateOnStateMachine: 1
   updateOnState: 0
+--- !u!114 &8155905437675366006
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7b563c62d3519fb488a0549ab7c446db, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sfx: {fileID: 8300000, guid: 40e0e9c389d148e4bbaf4bfdc54075cb, type: 3}
+  volume: 1

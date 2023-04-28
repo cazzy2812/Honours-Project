@@ -337,6 +337,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e5e1b64b165f2af45937f7ae69e05aea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  collectibleUpdate:
+    m_PersistentCalls:
+      m_Calls: []
   walkSpeed: 10
   jumpSpeed: 10.2
   airSpeed: 8
@@ -345,11 +348,16 @@ MonoBehaviour:
   hasFireballBook: 0
   hasMiniMageScroll: 0
   hasLightningStrikeBook: 0
+  maxCollectibles: 10
   isFacingRight: 1
   maxSummonCooldown: 20
   maxLightningCooldown: 10
+  pickUpCooldown: 0
+  maxPickUpCooldown: 0.5
   currentCheckpoint: 0
   respawnTime: 3
+  sfx: {fileID: 8300000, guid: 825c525cc52350d42ab0f1ff251e1f03, type: 3}
+  volume: 1
   isTouchingSpike: 0
 --- !u!114 &6367462024694439116
 MonoBehaviour:

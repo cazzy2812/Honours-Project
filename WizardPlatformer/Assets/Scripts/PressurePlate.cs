@@ -1,12 +1,15 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Rendering;
 
 public class PressurePlate : MonoBehaviour
 {
     public GameObject linkedObject;
     public GameObject linkedObjectPrefab;
     public int numOnPlate;
+    public AudioClip sfx;
+    public float volume = 1f;
 
     public Vector3 objectSpawn;
 
@@ -30,6 +33,7 @@ public class PressurePlate : MonoBehaviour
             numOnPlate++;
             if(numOnPlate >= 1)
             {
+                AudioSource.PlayClipAtPoint(sfx, gameObject.transform.position, volume);
                 TempRemoveObject();
             }
             

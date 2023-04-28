@@ -124,3 +124,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b4b113defaac53a4ca34d835deb8f93c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rotation: {x: 0, y: 90, z: 0}
+  sfx: {fileID: 8300000, guid: 1151af8680eca994695d262dcf1c8b67, type: 3}
+  volume: 1

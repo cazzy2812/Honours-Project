@@ -100,6 +100,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   healAmount: 50
   rotation: {x: 0, y: 90, z: 0}
+  sfx: {fileID: 8300000, guid: fe760eed2a2f0554086acaf9def28374, type: 3}
+  volume: 1
 --- !u!61 &7937458943396552366
 BoxCollider2D:
   m_ObjectHideFlags: 0

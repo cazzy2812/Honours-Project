@@ -6,7 +6,8 @@ public class PermPressurePlate : MonoBehaviour
 {
     public GameObject linkedObject;
     public int numOnPlate;
-
+    public AudioClip sfx;
+    public float volume = 1f;
 
     public void RemoveObject()
     {
@@ -20,6 +21,7 @@ public class PermPressurePlate : MonoBehaviour
             numOnPlate++;
             if (numOnPlate >= 1)
             {
+                AudioSource.PlayClipAtPoint(sfx, gameObject.transform.position, volume);
                 RemoveObject();
             }
 

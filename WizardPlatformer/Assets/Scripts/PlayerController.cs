@@ -2,12 +2,17 @@ using Assets.Scripts.Events;
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.Mathematics;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.InputSystem;
 
 [RequireComponent(typeof(Rigidbody), typeof(TouchingSurface))]
 public class PlayerController : MonoBehaviour
+
 {
+    public UnityEvent<int, int> collectibleUpdate;
+
     public float walkSpeed = 10f;
     public float jumpSpeed = 10.5f;
     public float airSpeed = 10f;
@@ -22,6 +27,24 @@ public class PlayerController : MonoBehaviour
     public bool hasFireballBook = false;
     public bool hasMiniMageScroll = false;
     public bool hasLightningStrikeBook = false;
+
+    public int maxCollectibles = 10;
+
+    private int currentCollectibles = 0;
+
+    public int CurrentCollectibles
+    {
+        get
+        {
+            return currentCollectibles;
+        }
+        set
+        {
+            currentCollectibles = value;
+            collectibleUpdate?.Invoke(currentCollectibles, maxCollectibles);
+        }
+    }
+
     public float currentSpeed
     {
         get
@@ -270,24 +293,37 @@ public class PlayerController : MonoBehaviour
 
     }
 
+    public float pickUpCooldown = 0f;
+    public float maxPickUpCooldown = 0.5f;
+
     public void PickUpExtraJump()
     {
         touchingSurface.maxAirJumps++;
+        pickUpCooldown = maxPickUpCooldown;
     }
 
     public void PickUpFireball()
     {
         hasFireballBook = true;
+        pickUpCooldown = maxPickUpCooldown;
     }
 
     public void PickUpMiniMage()
     {
         hasMiniMageScroll = true;
+        pickUpCooldown = maxPickUpCooldown;
     }
 
     public void PickUpLightningStrike()
     {
         hasLightningStrikeBook = true;
+        pickUpCooldown = maxPickUpCooldown;
+    }
+
+    public void PickUpCollectible()
+    {
+        CurrentCollectibles++;
+        pickUpCooldown = maxPickUpCooldown;
     }
 
     public void Respawn()
@@ -322,6 +358,7 @@ public class PlayerController : MonoBehaviour
 
     public float respawnTime = 3f;
 
+
     private void Update()
     {
         if(summonCooldown >= 0)
@@ -331,6 +368,10 @@ public class PlayerController : MonoBehaviour
         if(lightningCooldown >= 0)
         {
             lightningCooldown -= Time.deltaTime;
+        }
+        if(pickUpCooldown >= 0)
+        {
+            pickUpCooldown -= Time.deltaTime;
         }
         if (!damage.IsAlive)
         {

@@ -124,3 +124,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a88176bad2f8d7d4082ac60c40b178f4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  linkedObject: {fileID: 0}
+  numOnPlate: 0
+  sfx: {fileID: 8300000, guid: 5549b7994c46de54f9624d5259ac0957, type: 3}
+  volume: 1

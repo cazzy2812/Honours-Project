@@ -125,3 +125,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rotation: {x: 0, y: 90, z: 0}
+  sfx: {fileID: 8300000, guid: fd493ebd848ab8f4b986d1ef482ac501, type: 3}
+  volume: 1

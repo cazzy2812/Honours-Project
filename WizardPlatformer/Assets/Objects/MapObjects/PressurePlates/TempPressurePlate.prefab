@@ -126,4 +126,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   linkedObject: {fileID: 0}
   linkedObjectPrefab: {fileID: 0}
+  numOnPlate: 0
+  sfx: {fileID: 8300000, guid: 7c6918de806ac9540bb3ecad2ee7ab15, type: 3}
+  volume: 1
   objectSpawn: {x: 0, y: 0, z: 0}
